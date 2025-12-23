@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# Models
+model.pkl
+preprocessor.pkl
+*.joblib
+model.tar.gz
+
+# OS
+.DS_Store
+
