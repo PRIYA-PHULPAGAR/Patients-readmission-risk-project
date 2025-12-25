@@ -14,30 +14,13 @@ This project uses **machine learning** to predict whether a patient is at risk o
 
 ## 🏗️ System Architecture
 
-┌────────────────────┐
-│ Patient Data │
-│ (CSV / User Input) │
-└─────────┬──────────┘
-│
-▼
-┌────────────────────┐
-│ Data Preprocessing │
-│ (Scaling + Encoding│
-│ preprocessor.pkl) │
-└─────────┬──────────┘
-│
-▼
-┌────────────────────┐
-│ ML Model │
-│ Random Forest │
-│ (model.pkl) │
-└─────────┬──────────┘
-│
-▼
-┌────────────────────┐
-│ Streamlit Dashboard│
-│ Risk % + Category │
-└────────────────────┘
+## 🏗️ System Architecture
+
+```mermaid
+flowchart TD
+    A[Patient Data<br/>(CSV / User Input)] --> B[Data Preprocessing<br/>(Scaling & Encoding)<br/>preprocessor.pkl]
+    B --> C[ML Model<br/>Random Forest<br/>model.pkl]
+    C --> D[Streamlit Dashboard<br/>Risk % & Category]
 
 
 **Cloud Platform:** AWS SageMaker  
