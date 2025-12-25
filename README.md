@@ -17,14 +17,15 @@ This project uses **machine learning** to predict whether a patient is at risk o
 ```mermaid
 flowchart TD
     A["Patient Data (CSV or User Input)"]
-    B["Data Preprocessing (Scaling and Encoding) - preprocessor.pkl"]
-    C["Machine Learning Model - Random Forest (model.pkl)"]
-    D["Streamlit Dashboard (Risk Percentage and Category)"]
+    B["Data Preprocessing (Scaling and Encoding)"]
+    C["Machine Learning Model - Random Forest"]
+    D["Streamlit Dashboard"]
+    E["Cloud Platform - AWS SageMaker"]
 
     A --> B
     B --> C
     C --> D
-
+    D --> E
 
 **Cloud Platform:** AWS SageMaker  
 **Monitoring Ready:** CloudWatch (future extension)
