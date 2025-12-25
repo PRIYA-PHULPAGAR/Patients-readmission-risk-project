@@ -1,31 +1,49 @@
-# 🩺 Patient Readmission Risk Prediction Dashboard
+🩺 Patient Readmission Risk Prediction System
 
-A professional **Streamlit-based healthcare dashboard** that predicts the **30-day hospital readmission risk** of patients using machine learning.  
-Built, trained, and deployed using **Python, Scikit-learn, Streamlit, and AWS SageMaker**.
+An end-to-end Machine Learning–powered healthcare dashboard that predicts 30-day patient readmission risk using clinical, demographic, and lab data.
+The system is deployed using Streamlit and runs on AWS SageMaker.
 
 ---
 
-## 🚀 Project Overview
+🚀 Project Overview
 
-Hospital readmissions increase healthcare costs and impact patient outcomes.  
-This project uses **machine learning** to predict whether a patient is at risk of readmission within **30 days** based on demographics, lab results, and vitals — allowing doctors to intervene early.
+Hospital readmissions are costly and often preventable.
+This project helps healthcare professionals:
+
+Identify high-risk patients
+
+Take preventive actions before discharge
+
+Improve patient outcomes using data-driven insights
+
+The solution uses a Random Forest classifier trained on synthetic patient data and provides real-time predictions through a clean Streamlit dashboard.
 
 ---
 
 ## 🏗️ System Architecture
-
-```mermaid
 flowchart TD
     A["Patient Data (CSV or User Input)"]
-    B["Data Preprocessing (Scaling and Encoding)"]
-    C["Machine Learning Model - Random Forest"]
+    B["Data Preprocessing (Scaling & Encoding)"]
+    C["Machine Learning Model (Random Forest)"]
     D["Streamlit Dashboard"]
-    E["Cloud Platform - AWS SageMaker"]
+    E["AWS SageMaker Environment"]
 
     A --> B
     B --> C
     C --> D
     D --> E
+Architecture Explanation
+
+Patient Data: Synthetic dataset or manual user input
+
+Preprocessing: Encoding categorical features and scaling numerical values (preprocessor.pkl)
+
+ML Model: Random Forest classifier (model.pkl)
+
+Dashboard: Streamlit app for real-time predictions
+
+Cloud Platform: Hosted and executed on AWS SageMaker
+
 
 **Cloud Platform:** AWS SageMaker  
 **Monitoring Ready:** CloudWatch (future extension)
@@ -93,7 +111,8 @@ healthcare/
 
 ## 🖥️ Running the Application
 
-### 1️⃣ Install Dependencies
+##
+1️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
